@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video</title>
+    <style>
+        .top {
+            Margin-top: 50px;
+            Font-size: 0px;
+        }
+
+        .video-play {
+            Display: inline-block;
+            Width: 45%;
+            Height: 400px;
+            Border: 1px solid darkgreen;
+        }
+
+        .my-button {
+            Margin-left: 2%;
+            Width: 5%;
+            Font-size: 16px;
+            Vertical-align: top;
+        }
+
+        .some-description {}
+
+        .question-list-hide {
+            Display: inline-block;
+            Width: 45%;
+            Height: 400px;
+            Vertical-align: top;
+            Border: 1px solid darkgreen;
+            Border-left: none;
+            Font-size: 16px;
+
+            Transition-property: width height background-color font-size left top color;
+            Transition-duration: 2s;
+        }
+
+        .question-list-show {
+            Display: inline-block;
+            Width: 0%;
+            Height: 400px;
+            Vertical-align: top;
+            Border: 1px solid darkgreen;
+            Border-left: none;
+            Font-size: 16px;
+
+            Transition-property: width height background-color font-size left top color;
+            Transition-duration: 2s;
+        }
+    </style>
+    <script>
+        Function load() {
+            Var myButton = document.getElementsByClassName("my-button")[0];
+            myButton.onclick = function (e) {
+                Var questionList = document.getElementsByClassName('question-list-show')[0];
+                If(questionList)
+                questionList.className = "question-list-hide";
+                Else
+                questionList.className = "question-list-show";
+            };
+        }
+    </script>
+</head>
+
+<body onload="load();">
+    <div class="top">
+        <div class="video-play">
+            <video style="width: 100%; height:400px;" controls="controls">
+                <source src="http://p5tvuji1s.bkt.clouddn.com/f9aa884b-7097-476c-86e7-5382df77ffbc.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="question-list">
+            <ul>
+                Who are you? Where did you come from? Where are you going?
+                <li>My name is Jay.</li>
+                <li>I live outside Boston in the suburbs.</li>
+                <li>I have a cat named Lindy I rescued from a kill shelter.</li>
+                <li>I like to bike.</li>
+                <li>I make furniture as a hobby.</li>
+                <li>I make soap as a hobby.</li>
+                <li>I’m a Revolutionary War re-enactor.</li>
+            </ul>
+        </div>
+        <button class="my-button">click</button>
+    </div>
+    <p class="some-description">
+        I give tours of Boston as a hobby. I read a great deal, at least a book a week sometimes more. I have a degree in Economics,
+        one in Communications/Media and a Real Estate licence. I am a notary public. I've traveled to 22 countries and 46
+        US states. I am planning a trip to England to see the HMS Victory, Nelson's flagship at Trafalgar where he was killed.
+        My goal is to go to Halifax, Nova Scotia, Iceland and Durango, Wyoming. I would like to go to Bruges someday. I go
+        to a Congregational church and work on a van that feeds and clothes homeless people in Boston. I am not married,
+        nor have I ever been married. I have no girlfriend. I have no children. I come from a large family. I don't drink
+        or do drugs or smoke (except sometimes cigars). I am unemployed. And now I have to go feed the cat.</p>
+</body>
+
+</html>
